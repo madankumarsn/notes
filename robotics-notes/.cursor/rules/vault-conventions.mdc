@@ -1,0 +1,41 @@
+---
+description: Robotics notes vault conventions (structure, note template, editing rules)
+alwaysApply: true
+---
+<!-- Generative AI was used in the Creation/Modification of this file -->
+
+# Robotics Notes Vault
+
+Personal notes for a robotics perception/estimation engineer (Python, C++, ROS2).
+Goal: durable understanding and quick review, not a pile of summaries.
+
+## Structure
+
+- `01-math/`, `02-estimation/`, `03-perception/`, `04-software/`, `05-projects/`,
+  `06-papers/`, `07-debug-log/`
+- `_inbox/` holds unprocessed drafts. `_templates/` holds note skeletons.
+- One idea per note. Filenames are lowercase-hyphenated topic names.
+- Each area has a `_<area>-hub.md` that indexes its notes.
+- When an area has a real cluster (several notes on one topic), put that
+  cluster in a subfolder and group the hub the same way. A single note stays
+  in the area root until it has company. Current clusters: `04-software/ros2/`,
+  `python/`, `mlflow/`; `03-perception/product-mapping/`, `camera/`;
+  `05-projects/pikaros2/`, `bumblebee/`.
+
+## Note template
+
+See `_templates/note-template.md`. Frontmatter (`topic`,
+`status: draft|reviewed`, `layer`), then: one-line idea, why it exists,
+math/mechanics, code, gotchas, related `[[wikilinks]]`, still unclear.
+
+## Rules
+
+- Only include what the source material actually contains. Flag anything
+  uncertain instead of guessing or filling gaps.
+- Never mark a note `status: reviewed`. Only the user does that, after
+  rewriting it themselves.
+- Merge new material into existing topic notes instead of creating
+  duplicate notes on the same topic.
+- Do not rewrite the user's own edits in `status: reviewed` notes without
+  asking first.
+- Show the diff and commit only when explicitly asked.
